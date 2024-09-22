@@ -1,2 +1,4 @@
-package com.user.user.configuration;public class BeanConfiguration {
+package com.user.user.configuration;
+
+public class BeanConfiguration {
 }
