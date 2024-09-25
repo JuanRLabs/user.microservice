@@ -3,8 +3,6 @@ package com.user.user.adapters.driven.jpa.mysql.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
-
 @Entity
 @Table(name = "user")
 @Data
