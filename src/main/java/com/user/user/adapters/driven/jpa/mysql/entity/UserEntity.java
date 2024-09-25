@@ -32,7 +32,7 @@ public class UserEntity {
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "role_id")
-    private RoleEntity role;
+    @JoinColumn(name = "id_role")
+    private RoleEntity idrole;
 
 }
