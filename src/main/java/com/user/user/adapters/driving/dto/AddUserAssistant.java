@@ -1,6 +1,5 @@
 package com.user.user.adapters.driving.dto;
 
-import com.user.user.domain.model.Role;
 import lombok.Data;
 
 import java.util.Date;
