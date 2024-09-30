@@ -18,12 +18,12 @@ public class UserEntity {
     private String surname;
     private String email;
     private String phone;
-    private String birdDate;
+    private String bornDate;
     private String password;
     @Column(unique = true, nullable = false, length = 20)
     private String dni;
     @ManyToOne
     @JoinColumn(name = "id_role")
-    private RoleEntity idrole;
+    private RoleEntity idRole;
 
 }
