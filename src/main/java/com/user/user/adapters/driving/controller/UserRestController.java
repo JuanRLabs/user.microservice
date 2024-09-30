@@ -3,6 +3,7 @@ package com.user.user.adapters.driving.controller;
 import com.user.user.adapters.driving.dto.AddUserAssistant;
 import com.user.user.adapters.driving.mapper.IUserRequestMapper;
 import com.user.user.domain.api.IUserServicePort;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,8 @@ public class UserRestController {
     private final IUserServicePort userServicePort;
     private final IUserRequestMapper userRequestMapper;
 
-    @PostMapping("/createAssistant")
-    public ResponseEntity<Void> createAssistant(@RequestBody AddUserAssistant addUserAssistant){
+    @PostMapping("/saveUser")
+    public ResponseEntity<Void> saveUser(@Valid @RequestBody AddUserAssistant addUserAssistant){
         userServicePort.createAssistantWarehouse(userRequestMapper.toModel(addUserAssistant));
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
