@@ -1,5 +1,6 @@
 package com.user.user.adapters.driven.jpa.mysql.adapter;
 
+import com.user.user.adapters.driven.jpa.mysql.entity.UserEntity;
 import com.user.user.adapters.driven.jpa.mysql.mapper.IUserEntityMapper;
 import com.user.user.adapters.driven.jpa.mysql.repository.IUserRepository;
 import com.user.user.domain.model.User;
@@ -18,4 +19,17 @@ public class UserAdapter implements IUserPersistencePort {
     public void createAssistantWarehouse(User user) {
         userRepository.save(userEntityMapper.toEntity(user));
     }
+
+    @Override
+    public boolean existsUser(String dni) {
+      UserEntity optional = userRepository.findByDni(dni);
+        return optional == null;
+    }
+
+    @Override
+    public boolean existsUserEmail(String email ) {
+        UserEntity optional = userRepository.findByEmail(email);
+        return optional == null;
+    }
+
 }
