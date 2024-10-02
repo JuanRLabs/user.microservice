@@ -14,7 +14,7 @@ public class ConstantsDomain {
     public static final String FIELD_AGE_IS_NOT_VALID_MESSAGE =  "The age is not valid";
     public static final String FIELD_PASSWORD_IS_EMPTY_MESSAGE =  "The password cannot be empty";
     public static final String FIELD_PASSWORD_IS_NOT_VALID_MESSAGE =  "The password still is invalid format";
-    public static final String USER_ALREADY_EXISTS_MESSAGE = "The user already exist";
+    public static final String USER_ALREADY_EXISTS_MESSAGE = "The user with dni or email already exist";
 
 }
 
