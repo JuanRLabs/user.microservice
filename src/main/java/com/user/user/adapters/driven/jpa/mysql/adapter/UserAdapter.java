@@ -6,6 +6,7 @@ import com.user.user.adapters.driven.jpa.mysql.repository.IUserRepository;
 import com.user.user.domain.model.User;
 import com.user.user.domain.spi.IUserPersistencePort;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +15,7 @@ public class UserAdapter implements IUserPersistencePort {
 
     private final IUserRepository userRepository;
     private final IUserEntityMapper userEntityMapper;
+
 
     @Override
     public void createAssistantWarehouse(User user) {
