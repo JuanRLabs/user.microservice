@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 @RequiredArgsConstructor
 public class UserAdapter implements IUserPersistencePort {
@@ -30,7 +32,7 @@ public class UserAdapter implements IUserPersistencePort {
 
     @Override
     public boolean existsUserEmail(String email ) {
-        UserEntity optional = userRepository.findByEmail(email);
+        Optional<UserEntity> optional = userRepository.findByEmail(email);
         return optional == null;
     }
 

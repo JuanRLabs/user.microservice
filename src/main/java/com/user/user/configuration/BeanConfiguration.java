@@ -20,7 +20,6 @@ public class BeanConfiguration {
     private final IUserRepository userRepository;
     private final IUserEntityMapper userEntityMapper;
 
-
     @Bean
     public IUserPersistencePort userPersistencePort(){
         return new UserAdapter(userRepository, userEntityMapper);
@@ -30,7 +29,6 @@ public class BeanConfiguration {
     public IUserServicePort userServicePort(){
         return new UserUseCase(userPersistencePort(), encoderPersistencePort());
     }
-
 
     @Bean
     public IEncoderPersistencePort encoderPersistencePort(){

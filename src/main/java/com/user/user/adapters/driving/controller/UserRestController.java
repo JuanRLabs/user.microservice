@@ -21,7 +21,7 @@ public class UserRestController {
     private final IUserRequestMapper userRequestMapper;
 
     @PostMapping("/saveUser")
-    public ResponseEntity<Void> saveUser(@Valid @RequestBody AddUserAssistant addUserAssistant){
+    public ResponseEntity<Void> saveUser(@Valid @RequestBody AddUserAssistant addUserAssistant) {
         userServicePort.createAssistantWarehouse(userRequestMapper.toModel(addUserAssistant));
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
